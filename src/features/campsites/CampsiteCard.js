@@ -12,7 +12,6 @@ const CampsiteCard =({campsite}) => {
                   src={image}
                   alt={name}
         />
-
         <CardImgOverlay>
           <CardTitle>{name}</CardTitle>
         </CardImgOverlay>      
@@ -20,6 +19,6 @@ const CampsiteCard =({campsite}) => {
     </Link>
   );
 
-}
+};
 
 export default CampsiteCard;
