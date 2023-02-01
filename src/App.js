@@ -8,8 +8,10 @@ import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage';
 import Header from './components/Header';
 import logo from './logo.svg';
 import CampsiteDetailPage from './pages/CampsiteDetailPage';
-import { fetchCampsites } from './features/campsites/campsitesSlice';
 import AboutPage from './pages/AboutPage';
+import { fetchCampsites } from './features/campsites/campsitesSlice';
+import { fetchPartners } from './features/partners/partnersSlice';
+import { fetchPromotions } from './features/promotions/promotionsSlice';
 import './App.css';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
 
   useEffect(() =>{
     dispatch(fetchCampsites());
+    dispatch(fetchPartners());
+    dispatch(fetchPromotions());
   },[dispatch]);
 
   return (
